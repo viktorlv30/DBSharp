@@ -57,7 +57,16 @@ namespace Ado.Net
                         };
                         dataFromDb.Add(item);
                     }
+                    ShowDBfromDynamicList(dataFromDb);
                 }
+            }
+        }
+
+        private static void ShowDBfromDynamicList(List<dynamic> dynList)
+        {
+            foreach (var item in dynList)
+            {
+                Console.WriteLine(item.ToString());
             }
         }
     }
